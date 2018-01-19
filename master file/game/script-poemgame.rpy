@@ -51,7 +51,7 @@
     sayoribPos = 0
     monikaaPos = 0
     natsukiaPos = 0
-    yuriPos = 0
+    yuriaPos = 0
     sayoriOffset = 0
     natsukiOffset = 0
     yuriOffset = 0
@@ -61,15 +61,15 @@
     monikaaOffset = 0
     natsukiaOffset = 0
     yuriaOffset = 0
-    sayoriZoom = 1
-    natsukiZoom = 1
-    yuriZoom = 1
-    monikaZoom = 1
-    sayoriaZoom = 1
-    sayoribZoom = 1
-    monikaaZoom = 1
-    natsukiaZoom = 1
-    yuriaZoom = 1
+    sayoriZoom = 0.8
+    natsukiZoom = 0.8
+    yuriZoom = 0.8
+    monikaZoom = 0.8
+    sayoriaZoom = 0.8
+    sayoribZoom = 0.8
+    monikaaZoom = 0.8
+    natsukiaZoom = 0.8
+    yuriaZoom = 0.8
 
     def randomPauseSayori(trans, st, at):
         if st > sayoriTime:
@@ -138,7 +138,7 @@
         global sayoriPos
         global sayoriOffset
         global sayoriZoom
-        if st > .16:
+        if st > .1:
             if sayoriPos > 0:
                 sayoriPos = renpy.random.randint(-1,0)
             elif sayoriPos < 0:
@@ -148,10 +148,10 @@
             if trans.xoffset * sayoriPos > 5: sayoriPos *= -1
             return None
         if sayoriPos > 0:
-            trans.xzoom = -1
+            trans.xzoom = -0.8
         elif sayoriPos < 0:
-            trans.xzoom = 1
-        trans.xoffset += .16 * 10 * sayoriPos
+            trans.xzoom = 0.8
+        trans.xoffset += .12 * 10 * sayoriPos
         sayoriOffset = trans.xoffset
         sayoriZoom = trans.xzoom
         return 0
@@ -160,7 +160,7 @@
         global sayoriaPos
         global sayoriaOffset
         global sayoriaZoom
-        if st > .16:
+        if st > .1:
             if sayoriaPos > 0:
                 sayoriaPos = renpy.random.randint(-1,0)
             elif sayoriaPos < 0:
@@ -170,10 +170,10 @@
             if trans.xoffset * sayoriaPos > 5: sayoriaPos *= -1
             return None
         if sayoriaPos > 0:
-            trans.xzoom = -1
+            trans.xzoom = -0.8
         elif sayoriPos < 0:
-            trans.xzoom = 1
-        trans.xoffset += .16 * 10 * sayoriaPos
+            trans.xzoom = 0.8
+        trans.xoffset += .12 * 10 * sayoriaPos
         sayoriaOffset = trans.xoffset
         sayoriaZoom = trans.xzoom
         return 0
@@ -182,7 +182,7 @@
         global sayoribPos
         global sayoribOffset
         global sayoribZoom
-        if st > .16:
+        if st > .1:
             if sayoribPos > 0:
                 sayoriPos = renpy.random.randint(-1,0)
             elif sayoribPos < 0:
@@ -192,10 +192,10 @@
             if trans.xoffset * sayoribPos > 5: sayoribPos *= -1
             return None
         if sayoribPos > 0:
-            trans.xzoom = -1
+            trans.xzoom = -0.8
         elif sayoribPos < 0:
-            trans.xzoom = 1
-        trans.xoffset += .16 * 10 * sayoribPos
+            trans.xzoom = 0.8
+        trans.xoffset += .12 * 10 * sayoribPos
         sayoribOffset = trans.xoffset
         sayoribZoom = trans.xzoom
         return 0
@@ -204,7 +204,7 @@
         global natsukiPos
         global natsukiOffset
         global natsukiZoom
-        if st > .16:
+        if st > .1:
             if natsukiPos > 0:
                 natsukiPos = renpy.random.randint(-1,0)
             elif natsukiPos < 0:
@@ -214,10 +214,10 @@
             if trans.xoffset * natsukiPos > 5: natsukiPos *= -1
             return None
         if natsukiPos > 0:
-            trans.xzoom = -1
+            trans.xzoom = -0.8
         elif natsukiPos < 0:
-            trans.xzoom = 1
-        trans.xoffset += .16 * 10 * natsukiPos
+            trans.xzoom = 0.8
+        trans.xoffset += .12 * 10 * natsukiPos
         natsukiOffset = trans.xoffset
         natsukiZoom = trans.xzoom
         return 0
@@ -226,7 +226,7 @@
         global natsukiaPos
         global natsukiaOffset
         global natsukiaZoom
-        if st > .16:
+        if st > .1:
             if natsukiaPos > 0:
                 natsukiaPos = renpy.random.randint(-1,0)
             elif natsukiaPos < 0:
@@ -236,10 +236,10 @@
             if trans.xoffset * natsukiaPos > 5: natsukiaPos *= -1
             return None
         if natsukiaPos > 0:
-            trans.xzoom = -1
+            trans.xzoom = -0.8
         elif natsukiaPos < 0:
-            trans.xzoom = 1
-        trans.xoffset += .16 * 10 * natsukiaPos
+            trans.xzoom = 0.8
+        trans.xoffset += .12 * 10 * natsukiaPos
         natsukiaOffset = trans.xoffset
         natsukiaZoom = trans.xzoom
         return 0
@@ -248,7 +248,7 @@
         global yuriPos
         global yuriOffset
         global yuriZoom
-        if st > .16:
+        if st > .1:
             if yuriPos > 0:
                 yuriPos = renpy.random.randint(-1,0)
             elif yuriPos < 0:
@@ -258,10 +258,10 @@
             if trans.xoffset * yuriPos > 5: yuriPos *= -1
             return None
         if yuriPos > 0:
-            trans.xzoom = -1
+            trans.xzoom = -0.8
         elif yuriPos < 0:
-            trans.xzoom = 1
-        trans.xoffset += .16 * 10 * yuriPos
+            trans.xzoom = 0.8
+        trans.xoffset += .12 * 10 * yuriPos
         yuriOffset = trans.xoffset
         yuriZoom = trans.xzoom
         return 0
@@ -270,7 +270,7 @@
         global yuriaPos
         global yuriaOffset
         global yuriaZoom
-        if st > .16:
+        if st > .1:
             if yuriaPos > 0:
                 yuriaPos = renpy.random.randint(-1,0)
             elif yuriaPos < 0:
@@ -280,10 +280,10 @@
             if trans.xoffset * yuriaPos > 5: yuriaPos *= -1
             return None
         if yuriaPos > 0:
-            trans.xzoom = -1
+            trans.xzoom = -0.8
         elif yuriaPos < 0:
-            trans.xzoom = 1
-        trans.xoffset += .16 * 10 * yuriaPos
+            trans.xzoom = 0.8
+        trans.xoffset += .12 * 10 * yuriaPos
         yuriaOffset = trans.xoffset
         yuriaZoom = trans.xzoom
         return 0
@@ -292,7 +292,7 @@
         global monikaPos
         global monikaOffset
         global monikaZoom
-        if st > .16:
+        if st > .1:
             if monikaPos > 0:
                 monikaPos = renpy.random.randint(-1,0)
             elif monikaPos < 0:
@@ -302,10 +302,10 @@
             if trans.xoffset * monikaPos > 5: monikaPos *= -1
             return None
         if monikaPos > 0:
-            trans.xzoom = -1
+            trans.xzoom = -0.8
         elif monikaPos < 0:
-            trans.xzoom = 1
-        trans.xoffset += .16 * 10 * monikaPos
+            trans.xzoom = 0.8
+        trans.xoffset += .12 * 10 * monikaPos
         monikaOffset = trans.xoffset
         monikaZoom = trans.xzoom
         return 0
@@ -314,7 +314,7 @@
         global monikaaPos
         global monikaaOffset
         global monikaaZoom
-        if st > .16:
+        if st > .1:
             if monikaaPos > 0:
                 monikaaPos = renpy.random.randint(-1,0)
             elif monikaaPos < 0:
@@ -324,10 +324,10 @@
             if trans.xoffset * monikaaPos > 5: monikaaPos *= -1
             return None
         if monikaaPos > 0:
-            trans.xzoom = -1
+            trans.xzoom = -0.8
         elif monikaaPos < 0:
-            trans.xzoom = 1
-        trans.xoffset += .16 * 10 * monikaaPos
+            trans.xzoom = 0.8
+        trans.xoffset += .12 * 10 * monikaaPos
         monikaaOffset = trans.xoffset
         monikaaZoom = trans.xzoom
         return 0
@@ -344,37 +344,34 @@ label poem(transition=True):
     python:
         topRowDokis = []
         midRowDokis = []
+        altRowDokis = []
         botRowDokis = []
-        botPoses = [sticker_left, sticker_mid, sticker_right]
-        midPoses = [mid_sticker_left, mid_sticker_mid, mid_sticker_right]
-        topPoses = [top_sticker_left, top_sticker_mid, top_sticker_right]
-        unassignedDokis = ["Sayori", "Natsuki", "Yuri", "Sayoria", "Sayorib", "Natsukia", "Monikaa", "Yuria"]
-        if persistent.playthrough == 3:
-            unassignedDokis.append("Monika")
+        botPoses = [sticker_left, sticker_mid, sticker_alt, sticker_right]
+        midPoses = [mid_sticker_left, mid_sticker_mid, mid_sticker_alt, mid_sticker_right]
+        altPoses = [alt_sticker_left, alt_sticker_mid, alt_sticker_alt, alt_sticker_right]
+        topPoses = [top_sticker_left, top_sticker_mid, top_sticker_alt, top_sticker_right]
+        unassignedDokis = ["Sayori", "Natsuki", "Yuri", "Monika", "Sayoria", "Sayorib", "Natsukia", "Monikaa", "Yuria"]
         random.shuffle(unassignedDokis)
-    if persistent.playthrough is not 0:
-            $ unassignedDokis.remove("Sayori")
+        
     python:
         for doki in unassignedDokis:
-            if len(botRowDokis) < 3:
+            if len(botRowDokis) < 4:
                 botRowDokis.append(doki)
-            elif len(midRowDokis) < 3:
+            elif len(midRowDokis) < 2:
                 midRowDokis.append(doki)
+            elif len(altRowDokis) < 1:
+                altRowDokis.append(doki)
             else:
                 topRowDokis.append(doki)
     #Bottom Row Doki Placement
     $ i = 0
     label bRowLoop:
         $ jumper = 0
-        while i<3:
+        while i<4:
             python:
+                doki = ""
                 if len(botRowDokis) >= i+1:
                     doki = botRowDokis[i]
-                else:
-                    i+=1
-                    jumper = 1
-            if jumper == 1:
-                jump bRowLoop
             if doki == "Sayori":
                 show s_sticker at botPoses[i]
             if doki == "Sayoria":
@@ -405,15 +402,11 @@ label poem(transition=True):
     $ i = 0
     label mRowLoop:
         $ jumper = 0
-        while i < 3:
+        while i < 4:
             python:
+                doki = ""
                 if len(midRowDokis) >= i+1:
                     doki = midRowDokis[i]
-                else:
-                    i+=1
-                    jumper = 1
-            if jumper == 1:
-                jump mRowLoop
             if doki == "Sayori":
                 show s_sticker at midPoses[i]
             if doki == "Sayoria":
@@ -437,22 +430,53 @@ label poem(transition=True):
                 else:
                     show y_sticker at midPoses[i]
             if doki == "Yuria":
-                show ya_sticker at botPoses[i] 
+                show ya_sticker at midPoses[i]
+            $ i+=1
+
+    #Alt Row Doki Placement
+    $ i=0
+    label aRowLoop:
+        $ jumper = 0
+        while i < 4:
+            python:
+                doki = ""
+                if len(altRowDokis) >= i+1:
+                    doki = altRowDokis[i]
+            if doki == "Sayori":
+                show s_sticker at altPoses[i]
+            if doki == "Sayoria":
+                show sa_sticker at altPoses[i]
+            if doki == "Sayorib":
+                show sb_sticker at altPoses[i]
+
+            if doki == "Natsuki":
+                show n_sticker at altPoses[i]
+            if doki == "Natsukia":
+                show na_sticker at altPoses[i]
+
+            if doki == "Monika":
+                show m_sticker at altPoses[i]
+            if doki == "Monikaa":
+                show ma_sticker at altPoses[i]
+
+            if doki == "Yuri":
+                if persistent.playthrough == 2 and chapter == 2:
+                    show y_sticker_cut at altPoses[i]
+                else:
+                    show y_sticker at altPoses[i]
+            if doki == "Yuria":
+                show ya_sticker at altPoses[i]
             $ i+=1
 
     #Top Row Doki Placement
     $ i = 0
     label tRowLoop:
         $ jumper = 0
-        while i < 3:
+        while i < 4:
             python:
+                doki = ""
                 if len(topRowDokis) >= i+1:
                     doki = topRowDokis[i]
-                else:
-                    i += 1
-                    jumper = 1
-            if jumper == 1:
-                jump tRowLoop
             if doki == "Sayori":
                 show s_sticker at topPoses[i]
             if doki == "Sayoria":
@@ -531,14 +555,14 @@ label poem(transition=True):
         natsukiaOffset = 0
         yuriaOffset = 0
         monikaaOffset = 0
-        sayoriZoom = 1
-        natsukiZoom = 1
-        yuriZoom = 1
-        sayoriaZoom = 1
-        sayoribZoom = 1
-        natsukiaZoom = 1
-        yuriaZoom = 1
-        monikaaZoom = 1
+        sayorizoom = 0.8
+        natsukizoom = 0.8
+        yurizoom = 0.8
+        sayoriazoom = 0.8
+        sayoribzoom = 0.8
+        natsukiazoom = 0.8
+        yuriazoom = 0.8
+        monikaazoom = 0.8
 
 
         # Main loop for drawing and selecting words
@@ -705,7 +729,7 @@ image bg eyes:
 
 image s_sticker:
     "gui/poemgame/s_sticker_1.png"
-    xoffset sayoriOffset xzoom sayoriZoom
+    xoffset sayoriOffset xzoom sayoriZoom yzoom 0.8
     block:
         function randomPauseSayori
         parallel:
@@ -716,7 +740,7 @@ image s_sticker:
 
 image n_sticker:
     "gui/poemgame/n_sticker_1.png"
-    xoffset natsukiOffset xzoom natsukiZoom
+    xoffset natsukiOffset xzoom natsukiZoom yzoom 0.8
     block:
         function randomPauseNatsuki
         parallel:
@@ -727,7 +751,7 @@ image n_sticker:
 
 image y_sticker:
     "gui/poemgame/y_sticker_1.png"
-    xoffset yuriOffset xzoom yuriZoom
+    xoffset yuriOffset xzoom yuriZoom yzoom 0.8
     block:
         function randomPauseYuri
         parallel:
@@ -738,7 +762,7 @@ image y_sticker:
 
 image y_sticker_cut:
     "gui/poemgame/y_sticker_cut_1.png"
-    xoffset yuriOffset xzoom yuriZoom
+    xoffset yuriOffset xzoom yuriZoom yzoom 0.8
     block:
         function randomPauseYuri
         parallel:
@@ -749,7 +773,7 @@ image y_sticker_cut:
 
 image m_sticker:
     "gui/poemgame/m_sticker_1.png"
-    xoffset monikaOffset xzoom monikaZoom
+    xoffset monikaOffset xzoom monikaZoom yzoom 0.8
     block:
         function randomPauseMonika
         parallel:
@@ -760,7 +784,7 @@ image m_sticker:
 
 image sa_sticker:
     "mod-assets/fylc/sayoria1.png"
-    xoffset sayoriaOffset xzoom sayoriaZoom
+    xoffset sayoriaOffset xzoom sayoriaZoom yzoom 0.8
     block:
         function randomPauseSayoria
         parallel:
@@ -771,7 +795,7 @@ image sa_sticker:
 
 image sb_sticker:
     "mod-assets/fylc/sayorib1.png"
-    xoffset sayoribOffset xzoom sayoribZoom
+    xoffset sayoribOffset xzoom sayoribZoom yzoom 0.8
     block:
         function randomPauseSayorib
         parallel:
@@ -782,7 +806,7 @@ image sb_sticker:
 
 image ma_sticker:
     "mod-assets/fylc/monika1.png"
-    xoffset monikaaOffset xzoom monikaaZoom
+    xoffset monikaaOffset xzoom monikaaZoom yzoom 0.8
     block:
         function randomPauseMonikaa
         parallel:
@@ -793,7 +817,7 @@ image ma_sticker:
 
 image na_sticker:
     "mod-assets/fylc/natsuki1.png"
-    xoffset natsukiaOffset xzoom natsukiaZoom
+    xoffset natsukiaOffset xzoom natsukiaZoom yzoom 0.8
     block:
         function randomPauseNatsukia
         parallel:
@@ -804,7 +828,7 @@ image na_sticker:
 
 image ya_sticker:
     "mod-assets/fylc/yuri1.png"
-    xoffset yuriaOffset xzoom yuriaZoom
+    xoffset yuriaOffset xzoom yuriaZoom yzoom 0.8
     block:
         function randomPauseYuria
         parallel:
@@ -816,44 +840,44 @@ image ya_sticker:
 
 image s_sticker hop:
     "gui/poemgame/s_sticker_2.png"
-    xoffset sayoriOffset xzoom sayoriZoom
+    xoffset sayoriOffset xzoom sayoriZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "s_sticker"
 
 image n_sticker hop:
     "gui/poemgame/n_sticker_2.png"
-    xoffset natsukiOffset xzoom natsukiZoom
+    xoffset natsukiOffset xzoom natsukiZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "n_sticker"
 
 image y_sticker hop:
     "gui/poemgame/y_sticker_2.png"
-    xoffset yuriOffset xzoom yuriZoom
+    xoffset yuriOffset xzoom yuriZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "y_sticker"
 
 image y_sticker_cut hop:
     "gui/poemgame/y_sticker_cut_2.png"
-    xoffset yuriOffset xzoom yuriZoom
+    xoffset yuriOffset xzoom yuriZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "y_sticker_cut"
 
 image y_sticker hopg:
     "gui/poemgame/y_sticker_2g.png"
-    xoffset yuriOffset xzoom yuriZoom
+    xoffset yuriOffset xzoom yuriZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "y_sticker"
 
 image m_sticker hop:
     "gui/poemgame/m_sticker_2.png"
-    xoffset monikaOffset xzoom monikaZoom
+    xoffset monikaOffset xzoom monikaZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "m_sticker"
 
 image y_sticker glitch:
@@ -869,47 +893,50 @@ image y_sticker glitch:
 
 image sa_sticker hop:
     "mod-assets/fylc/sayoria2.png"
-    xoffset sayoriaOffset xzoom sayoriaZoom
+    xoffset sayoriaOffset xzoom sayoriaZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "sa_sticker"
 
 image sb_sticker hop:
     "mod-assets/fylc/sayorib2.png"
-    xoffset sayoribOffset xzoom sayoribZoom
+    xoffset sayoribOffset xzoom sayoribZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "sb_sticker"
 
 image ma_sticker hop:
     "mod-assets/fylc/monika2.png"
-    xoffset monikaaOffset xzoom monikaaZoom
+    xoffset monikaaOffset xzoom monikaaZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "ma_sticker"
 
 image na_sticker hop:
     "mod-assets/fylc/natsuki2.png"
-    xoffset natsukiaOffset xzoom natsukiaZoom
+    xoffset natsukiaOffset xzoom natsukiaZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "na_sticker"
 
 image ya_sticker hop:
     "mod-assets/fylc/yuri2.png"
-    xoffset yuriaOffset xzoom yuriaZoom
+    xoffset yuriaOffset xzoom yuriaZoom yzoom 0.8
     sticker_hop
-    xoffset 0 xzoom 1
+    xoffset 0 xzoom 1 yzoom 1
     "ya_sticker"
 
 transform sticker_left:
-    xcenter 100 yalign 0.9 subpixel True
+    xcenter 50 yalign 0.95 subpixel True
 
 transform sticker_mid:
-    xcenter 220 yalign 0.9 subpixel True
+    xcenter 145 yalign 0.95 subpixel True
+
+transform sticker_alt:
+    xcenter 230 yalign 0.95 subpixel True
 
 transform sticker_right:
-    xcenter 340 yalign 0.9 subpixel True
+    xcenter 325 yalign 0.95 subpixel True
 
 transform sticker_glitch:
     xcenter 50 yalign 1.8 subpixel True
@@ -918,29 +945,48 @@ transform sticker_m_glitch:
     xcenter 100 yalign 1.35 subpixel True
 
 transform mid_sticker_left:
-    xcenter 100 yalign 0.5 subpixel True
+    xcenter 50 yalign 0.675 subpixel True
 
 transform mid_sticker_mid:
-    xcenter 220 yalign 0.5 subpixel True
+    xcenter 145 yalign 0.675 subpixel True
+
+transform mid_sticker_alt:
+    xcenter 230 yalign 0.675 subpixel True
 
 transform mid_sticker_right:
-    xcenter 340 yalign 0.5 subpixel True
+    xcenter 325 yalign 0.675 subpixel True
+
+transform alt_sticker_left:
+    xcenter 50 yalign 0.4 subpixel True
+
+transform alt_sticker_mid:
+    xcenter 145 yalign 0.4 subpixel True
+
+transform alt_sticker_alt:
+    xcenter 230 yalign 0.4 subpixel True
+
+transform alt_sticker_right:
+    xcenter 325 yalign 0.4 subpixel True
 
 transform top_sticker_left:
-    xcenter 100 yalign 0.1 subpixel True
+    xcenter 50 yalign 0.125 subpixel True
 
 transform top_sticker_mid:
-    xcenter 220 yalign 0.1 subpixel True
+    xcenter 145 yalign 0.125 subpixel True
+
+transform top_sticker_alt:
+    xcenter 230 yalign 0.125 subpixel True
 
 transform top_sticker_right:
-    xcenter 340 yalign 0.1 subpixel True
+    xcenter 325 yalign 0.125 subpixel True
+
 
 transform sticker_move_n:
     easein_quad .08 yoffset -15
     easeout_quad .08 yoffset 0
 
 transform sticker_hop:
-    easein_quad .18 yoffset -80
+    easein_quad .18 yoffset -25
     easeout_quad .18 yoffset 0
-    easein_quad .18 yoffset -80
+    easein_quad .18 yoffset -25
     easeout_quad .18 yoffset 0
